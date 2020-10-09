@@ -1,0 +1,2 @@
+class Cachorro < ApplicationRecord
+end

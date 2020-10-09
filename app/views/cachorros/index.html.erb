@@ -1,0 +1,7 @@
+<h1>Tela principal de Cachorros</h1>
+<ul>
+    <% @cachorros.each do |cachorro|%>
+        <li><%= cachorro.nome %></li>
+        <li><%= cachorro.raca %></li>
+    <% end %>
+</ul>
