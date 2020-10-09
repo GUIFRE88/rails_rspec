@@ -25,30 +25,7 @@ RSpec.describe CachorrosController, type: :controller do
             expect(response.status).to eq(200)
 
         end
-       
-        it "Esta rota precisa renderizar o template index" do 
-            
-            # Chama rotina index
-            get :index
-
-            # Verifica se teve o retorno da pagina Index
-            expect(response).to render_template("index")
-
-        end
-
-        it "Verifica se o código foi inserido na pagina" do 
-            
-            # Cria cachorro
-            cachorro = Cachorro.create(nome: "Boomer", raca: "Beagle")
-
-            # Chama a rota index
-            get :index
-
-            # Verifica se no body existe uma lista de cachorros
-            expect(response.body).to match /<ul>.*?<li>/im
-
-        end
-
 
     end
+    
 end
